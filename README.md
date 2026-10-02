@@ -1,6 +1,6 @@
-# SW Supply & Services C.A. — Sitio web corporativo
+# SW Works Group LLC — Sitio web corporativo
 
-Sitio estático (HTML + CSS + JS, sin dependencias ni paso de compilación) para **SW Supply & Services C.A.**, empresa de servicios a pozos petroleros y de gas con base en Anaco, Cuenca Oriental de Venezuela.
+Sitio estático (HTML + CSS + JS, sin dependencias ni paso de compilación) para **SW Works Group LLC**, empresa de servicios a pozos petroleros y de gas con base en Anaco, Cuenca Oriental de Venezuela.
 
 ## Estructura
 
@@ -41,7 +41,7 @@ Sitio estático (HTML + CSS + JS, sin dependencias ni paso de compilación) para
 - Llamadas a la acción para emergencias 24/7, botón flotante de WhatsApp y enlaces `tel:` en todos los teléfonos.
 
 **Diseño y accesibilidad**
-- El logo azul marino era casi invisible sobre la barra negra: se generó una versión clara (`img/logo-light.*`).
+- Marca única **SW Works Group LLC**: en la barra y el pie se usa el símbolo SW (`img/brand-mark.webp`, fondo transparente) con el nombre en texto HTML, nítido en cualquier pantalla. `img/logo-sw-works-group.png` es el logo completo sobre blanco (Google, documentos).
 - Tamaños de letra mínimos de 11–12 px (antes 9 px) y gris secundario con contraste suficiente.
 - Menú desplegable navegable con teclado, menú móvil con `aria-expanded` y cierre con Esc, enlace "Saltar al contenido", foco visible y soporte de `prefers-reduced-motion`.
 - Si JavaScript falla, el contenido sigue visible (las animaciones solo se activan con JS).
@@ -65,9 +65,16 @@ Antes de publicar, confirme estos datos; no se pudieron verificar desde aquí:
 3. **Galería**: 40 fotos (mudanza RIG-679, simulacros, atmósferas, industria petrolera) se cargan desde `swsecuritygroups.com/images/portfolio/...`. Si ese sitio se da de baja, esas fotos desaparecen (la galería las oculta automáticamente). Recomendación: descargarlas, convertirlas a WebP y guardarlas en `img/`.
 4. **Datos técnicos a confirmar**:
    - Serie del motor Detroit Diesel de las bombas (el texto original decía "Serie 65", que no corresponde a una serie de Detroit; por 600 BHP @ 2,100–2,200 rpm probablemente sea **Serie 60**). En el sitio se indica solo "Detroit Diesel".
-   - "+15 años" se presenta como experiencia del equipo técnico (el RIF J-40860524-4 es más reciente que 15 años).
+   - "+15 años" se presenta como experiencia del equipo técnico.
    - Aplicaciones listadas en las páginas de Slickline y Wireline (son las aplicaciones típicas del servicio; ajuste según el alcance real de sus unidades).
    - Tiempos de respuesta (< 4 h local, < 24 h propuesta y movilización).
+
+## Marca: pendiente
+
+- **Logo en alta resolución**: el logo recibido mide 170 × 82 px. Se limpió y se ajustó para fondo oscuro, pero para máxima nitidez (pantallas retina, impresión) envíe el archivo original en **SVG, PDF o PNG de al menos 1000 px**; basta con reemplazar `img/brand-mark.webp` y `img/logo-sw-works-group.png`.
+- **Datos de contacto**: se mantienen dirección en Anaco, teléfonos, correo `info@swsecuritygroups.com` y redes sociales del sitio anterior. Si SW Works Group LLC usa otro dominio, correo o redes, hay que actualizarlos (en `pages/*.html`, `index.html` y `js/global.js`).
+- La foto `cabin_exterior` muestra el rótulo de la marca anterior pintado en la cabina; si no conviene, puede retirarse de la flota y la galería.
+- Se eliminó el RIF de la empresa anterior. Si la LLC tiene un número de registro que deba mostrarse, se añade en el pie de página.
 
 ## Cómo publicar
 

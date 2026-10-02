@@ -1,5 +1,5 @@
 /* ============================================================
-   SW SUPPLY & SERVICES C.A. — JavaScript global
+   SW WORKS GROUP LLC — JavaScript global
    Nav · menú móvil · reveal · contadores · formulario · galería
    ============================================================ */
 (function () {
@@ -115,7 +115,7 @@
       var d = new FormData(form);
       var extras = d.getAll('adicional[]').join(', ');
       var lines = [
-        'Solicitud de servicio — SW Supply & Services',
+        'Solicitud de servicio — SW Works Group LLC',
         'Nombre: ' + (d.get('nombre') || ''),
         'Cargo: ' + (d.get('cargo') || ''),
         'Empresa: ' + (d.get('empresa') || ''),
