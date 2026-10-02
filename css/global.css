@@ -86,7 +86,7 @@ strong { color: var(--white); font-weight: 600; }
 .nav.scrolled { background: rgba(6,11,22,.97); border-bottom-color: rgba(126,176,255,.3); }
 .nav-logo { display: flex; align-items: center; flex-shrink: 0; }
 .brand { display: inline-flex; align-items: center; gap: 12px; }
-.brand-mark { height: 46px; width: auto; flex-shrink: 0; filter: drop-shadow(0 0 1px rgba(255,255,255,.5)) drop-shadow(0 0 6px rgba(126,176,255,.18)); }
+.brand-mark { height: 52px; width: auto; flex-shrink: 0; filter: drop-shadow(0 0 1px rgba(255,255,255,.5)) drop-shadow(0 0 6px rgba(126,176,255,.18)); }
 .brand-word { display: flex; flex-direction: column; line-height: 1; border-left: 1px solid rgba(255,255,255,.18); padding-left: 12px; }
 .brand-word b { font-family: var(--fB); font-weight: 700; font-size: 17px; letter-spacing: .1em; text-transform: uppercase; color: var(--white); white-space: nowrap; }
 .brand-word small { font-family: var(--fB); font-weight: 600; font-size: 11px; letter-spacing: .5em; color: var(--red); margin-top: 5px; }
@@ -434,7 +434,7 @@ body.menu-open { overflow: hidden; }
 .footer { background: var(--dark2); border-top: 1px solid var(--steel); }
 .footer-top { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 48px; padding: 72px var(--section-px) 48px; }
 .footer-logo { margin-bottom: 20px; }
-.footer-logo .brand-mark { height: 56px; }
+.footer-logo .brand-mark { height: 64px; }
 .footer-brand p { font-size: 14px; color: var(--grey-mid); line-height: 1.7; max-width: 300px; margin-bottom: 20px; }
 .footer-col h2 { font-family: var(--fH); font-weight: 700; font-size: 14px; letter-spacing: .14em; text-transform: uppercase; color: var(--sky); margin-bottom: 18px; padding-bottom: 10px; border-bottom: 1px solid var(--steel); }
 .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
@@ -624,7 +624,7 @@ legend span { color: var(--sky); font-family: var(--fM); font-size: 12px; margin
 }
 @media (max-width: 640px) {
   :root { --nav-h: 64px; }
-  .brand-mark { height: 38px; }
+  .brand-mark { height: 42px; }
   .brand-word b { font-size: 15px; letter-spacing: .07em; }
   .brand-word small { font-size: 10px; }
   .svc-grid, .svc-grid--3, .info-grid, .info-grid--3, .process, .tile-grid, .equip-sub, .equip-sub--2 { grid-template-columns: 1fr; }
