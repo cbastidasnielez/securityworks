@@ -3,8 +3,8 @@
   "short_name": "SW Works",
   "start_url": "/index.html",
   "display": "browser",
-  "background_color": "#080808",
-  "theme_color": "#080808",
+  "background_color": "#060B16",
+  "theme_color": "#060B16",
   "icons": [
     { "src": "/img/favicon.png", "sizes": "64x64", "type": "image/png" },
     { "src": "/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }

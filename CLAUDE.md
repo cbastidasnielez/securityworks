@@ -6,6 +6,10 @@ Sitio estático (HTML + CSS + JS, sin compilación) publicado en GitHub Pages en
 
 - **Los archivos HTML son la fuente de verdad.** No hay generador ni plantillas: cada página tiene su propia copia de la cabecera (`<nav>`), el menú móvil y el pie. Si cambias el menú, el pie, el teléfono, la dirección o el correo, hazlo en **todas** las páginas (`index.html`, `404.html` y `pages/*.html`): busca el texto con grep antes y después.
 - Estilos: solo `css/global.css` (tokens de color y tipografía en `:root`). Scripts: solo `js/global.js`.
+- Paleta de marca (colores del logo, bandera de EE. UU.), siempre vía tokens de `:root`:
+  - Rojo: `--red` para texto y acentos sobre fondo oscuro (palabras destacadas en títulos, enlaces de acción, líneas); `--red-btn` / `--red-btn-h` para rellenos de botones con texto blanco.
+  - Azul: `--sky` para etiquetas, iconos y datos técnicos; `--navy` para bloques (barra de cifras); fondos `--black`, `--dark`, `--dark2` (negro azulado).
+  - No usar colores sueltos ni volver al naranja. Todo par texto/fondo debe cumplir contraste AA (4.5:1).
 - Imágenes: formato WebP en `img/`, con `width` y `height` en la etiqueta `<img>`; `loading="lazy"` salvo la imagen principal de cada página.
 - Cada página nueva necesita: `<title>` y `description` únicos, `canonical` con `https://swworksgroup.com/...`, entrada en `sitemap.xml` y enlace en el menú/pie.
 - El 404 usa rutas absolutas (`/css/...`) porque se sirve desde cualquier URL.

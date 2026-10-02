@@ -171,7 +171,7 @@
           if (status) {
             status.className = 'form-status success';
             status.innerHTML =
-              '<svg width="44" height="44" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" stroke="#FF6600" stroke-width="1.5"/><path d="M12 20l6 6 10-12" stroke="#FF6600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+              '<svg width="44" height="44" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="19" stroke="#7EB0FF" stroke-width="1.5"/><path d="M12 20l6 6 10-12" stroke="#7EB0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
               '<h3>Solicitud recibida</h3>' +
               '<p>Nuestro equipo de operaciones revisará su requerimiento y le contactará en menos de 24 horas hábiles. ' +
               'Si su caso es una <strong>emergencia operacional</strong>, llámenos ahora al <a href="tel:+584148396308">0414-839.6308</a>.</p>';
