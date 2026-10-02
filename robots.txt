@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://swsecuritygroups.com/sitemap.xml
+Sitemap: https://swworksgroup.com/sitemap.xml

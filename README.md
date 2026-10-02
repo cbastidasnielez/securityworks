@@ -61,7 +61,7 @@ Sitio estático (HTML + CSS + JS, sin dependencias ni paso de compilación) para
 Antes de publicar, confirme estos datos; no se pudieron verificar desde aquí:
 
 1. **Formspree**: el formulario usa el ID `xpznwkjd`, que coincide con el *ejemplo* del README original. Si no es su ID real, cree el formulario en https://formspree.io y reemplace el ID en `pages/contacto.html` (`action="https://formspree.io/f/SU_ID"`). Mientras tanto, el respaldo de WhatsApp/correo sigue funcionando.
-2. **Dominio**: las URL canónicas, el sitemap y Open Graph usan `https://swsecuritygroups.com`. Si el sitio se publica en otro dominio, busque y reemplace esa dirección en todos los archivos.
+2. **Dominio**: la web vive en `https://swworksgroup.com` (URL canónicas, sitemap y Open Graph). En cPanel el dominio debe tener como Document Root `public_html/securityworks`.
 3. **Galería**: 40 fotos (mudanza RIG-679, simulacros, atmósferas, industria petrolera) se cargan desde `swsecuritygroups.com/images/portfolio/...`. Si ese sitio se da de baja, esas fotos desaparecen (la galería las oculta automáticamente). Recomendación: descargarlas, convertirlas a WebP y guardarlas en `img/`.
 4. **Datos técnicos a confirmar**:
    - Serie del motor Detroit Diesel de las bombas (el texto original decía "Serie 65", que no corresponde a una serie de Detroit; por 600 BHP @ 2,100–2,200 rpm probablemente sea **Serie 60**). En el sitio se indica solo "Detroit Diesel".
@@ -76,7 +76,11 @@ Antes de publicar, confirme estos datos; no se pudieron verificar desde aquí:
 - La foto de la cabina (`cabin_exterior`) se mantiene.
 - No se muestra número de registro de la empresa.
 
-## Cómo publicar
+## Publicación automática
+
+Cada cambio que entra en la rama `main` se publica solo: GitHub Actions (`.github/workflows/deploy.yml`) sube los archivos por FTP a `public_html/securityworks`. Requiere tres secretos en GitHub → Settings → Secrets and variables → Actions: `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD`.
+
+## Cómo publicar manualmente
 
 - **GitHub Pages**: Settings → Pages → Source: rama `main`, carpeta `/ (root)`.
 - **Netlify**: arrastrar la carpeta del repositorio al panel.
