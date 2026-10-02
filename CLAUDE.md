@@ -22,7 +22,7 @@ Sitio estático (HTML + CSS + JS, sin compilación) publicado en GitHub Pages en
 
 - El formulario (`pages/contacto.html`) envía a Formspree con ID `xpznwkjd`; confirmar que es el ID real de la cuenta del cliente.
 - 40 fotos de `pages/galeria.html` se cargan desde `swsecuritygroups.com/images/portfolio/`; conviene descargarlas a `img/` en WebP.
-- El logo es de baja resolución (170×82 px); reemplazar `img/brand-mark.webp` cuando haya un original en SVG o PNG grande.
+- Logo: `img/brand-mark.webp` es el símbolo SW con fondo transparente (para fondos oscuros) y `img/logo-sw-works-group.png` el logo completo sobre blanco. Si el cliente entrega el original en SVG, sustituir ambos.
 
 ## Publicación
 
