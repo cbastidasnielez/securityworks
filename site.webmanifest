@@ -1,0 +1,12 @@
+{
+  "name": "SW Supply & Services C.A.",
+  "short_name": "SW Supply",
+  "start_url": "/index.html",
+  "display": "browser",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "icons": [
+    { "src": "/img/favicon.png", "sizes": "64x64", "type": "image/png" },
+    { "src": "/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ]
+}

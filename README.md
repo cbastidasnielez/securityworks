@@ -1,0 +1,89 @@
+# SW Supply & Services C.A. — Sitio web corporativo
+
+Sitio estático (HTML + CSS + JS, sin dependencias ni paso de compilación) para **SW Supply & Services C.A.**, empresa de servicios a pozos petroleros y de gas con base en Anaco, Cuenca Oriental de Venezuela.
+
+## Estructura
+
+```
+/
+├── index.html                 Inicio
+├── 404.html                   Página de error (GitHub Pages / Netlify la usan automáticamente)
+├── css/global.css             Sistema de diseño único (todas las páginas)
+├── js/global.js               Menú, animaciones, contadores, formulario y galería
+├── img/                       Fotos en WebP + logo, favicon e imagen para redes (og-image.jpg)
+├── pages/
+│   ├── empresa.html           Quiénes somos, misión, visión, valores, área de operación
+│   ├── servicios.html         Resumen de las 5 líneas de servicio
+│   ├── coiled-tubing.html     ┐
+│   ├── well-testing.html      │
+│   ├── slickline.html         ├ Una página por servicio (SEO + conversión)
+│   ├── wireline.html          │
+│   ├── workover.html          ┘
+│   ├── flota.html             Equipos y especificaciones técnicas
+│   ├── facilidades.html       Facilidades de superficie y HSE
+│   ├── galeria.html           Galería filtrable con visor
+│   └── contacto.html          Formulario de solicitud + mapa
+├── sitemap.xml · robots.txt · site.webmanifest · .nojekyll
+```
+
+## Qué se mejoró respecto a la v6
+
+**Contenido y sector (well services)**
+- Se crearon las 8 páginas que el menú enlazaba pero no existían (empresa, servicios, 5 servicios, facilidades): antes daban error 404.
+- Terminología técnica corregida:
+  - La cabina de control es marca **Jereh** (se ve en la foto del panel), no "Jerell".
+  - Slickline no hace "perfilaje": ahora describe calibración, registradores de memoria, válvulas de gas lift, camisas y tapones.
+  - La tarjeta de Well Testing mostraba "bombas triplex WT 1201/1202" (son equipos de bombeo): ahora muestra choke manifold, separador y quemador.
+  - "Pistones 3" configuración duplex" en una bomba triplex → "Émbolos 3"".
+  - SENCAMER con su nombre oficial completo.
+  - La membresía IADC ya no se presenta como algo que "permite certificar equipos" (la IADC no certifica equipos de terceros).
+- Se añadió la sección "Cómo trabajamos" (evaluación → programa → movilización → ejecución → reporte), que es lo que un ingeniero de operaciones de la operadora quiere ver.
+- Llamadas a la acción para emergencias 24/7, botón flotante de WhatsApp y enlaces `tel:` en todos los teléfonos.
+
+**Diseño y accesibilidad**
+- El logo azul marino era casi invisible sobre la barra negra: se generó una versión clara (`img/logo-light.*`).
+- Tamaños de letra mínimos de 11–12 px (antes 9 px) y gris secundario con contraste suficiente.
+- Menú desplegable navegable con teclado, menú móvil con `aria-expanded` y cierre con Esc, enlace "Saltar al contenido", foco visible y soporte de `prefers-reduced-motion`.
+- Si JavaScript falla, el contenido sigue visible (las animaciones solo se activan con JS).
+- Se completó la celda vacía de la galería de inicio y se quitaron las fotos duplicadas.
+
+**Rendimiento y SEO**
+- Fotos convertidas a WebP (~40 % menos peso) con `width`/`height` para evitar saltos de diseño; imagen principal precargada.
+- Todo el CSS en un único archivo cacheable (antes había ~25 KB de estilos repetidos dentro de cada página).
+- Etiquetas `title`/`description` únicas por página, `canonical`, Open Graph (vista previa en WhatsApp/LinkedIn), datos estructurados `LocalBusiness`, `Service` y `BreadcrumbList`, `sitemap.xml` y `robots.txt`.
+
+**Formulario**
+- Si el envío falla (o Formspree no está configurado), el usuario puede reenviar su solicitud **con un clic por WhatsApp o correo**, con los datos ya escritos. No se pierde ningún lead.
+- Desde cada página de servicio, el botón "Cotizar" abre el formulario con el servicio ya seleccionado (`contacto.html?servicio=coiled-tubing`).
+
+## Pendiente de validar por SW (importante)
+
+Antes de publicar, confirme estos datos; no se pudieron verificar desde aquí:
+
+1. **Formspree**: el formulario usa el ID `xpznwkjd`, que coincide con el *ejemplo* del README original. Si no es su ID real, cree el formulario en https://formspree.io y reemplace el ID en `pages/contacto.html` (`action="https://formspree.io/f/SU_ID"`). Mientras tanto, el respaldo de WhatsApp/correo sigue funcionando.
+2. **Dominio**: las URL canónicas, el sitemap y Open Graph usan `https://swsecuritygroups.com`. Si el sitio se publica en otro dominio, busque y reemplace esa dirección en todos los archivos.
+3. **Galería**: 40 fotos (mudanza RIG-679, simulacros, atmósferas, industria petrolera) se cargan desde `swsecuritygroups.com/images/portfolio/...`. Si ese sitio se da de baja, esas fotos desaparecen (la galería las oculta automáticamente). Recomendación: descargarlas, convertirlas a WebP y guardarlas en `img/`.
+4. **Datos técnicos a confirmar**:
+   - Serie del motor Detroit Diesel de las bombas (el texto original decía "Serie 65", que no corresponde a una serie de Detroit; por 600 BHP @ 2,100–2,200 rpm probablemente sea **Serie 60**). En el sitio se indica solo "Detroit Diesel".
+   - "+15 años" se presenta como experiencia del equipo técnico (el RIF J-40860524-4 es más reciente que 15 años).
+   - Aplicaciones listadas en las páginas de Slickline y Wireline (son las aplicaciones típicas del servicio; ajuste según el alcance real de sus unidades).
+   - Tiempos de respuesta (< 4 h local, < 24 h propuesta y movilización).
+
+## Cómo publicar
+
+- **GitHub Pages**: Settings → Pages → Source: rama `main`, carpeta `/ (root)`.
+- **Netlify**: arrastrar la carpeta del repositorio al panel.
+- **Hosting cPanel (Hostinger, SiteGround…)**: subir todos los archivos por FTP manteniendo las carpetas.
+
+Para probar en local: `python3 -m http.server` en la carpeta del repositorio y abrir http://localhost:8000.
+
+## Paleta y tipografías
+
+| Token | Valor | Uso |
+|---|---|---|
+| `--black` | `#080808` | Fondo |
+| `--orange` | `#FF6600` | Color de marca / seguridad |
+| `--amber` | `#F5A623` | Datos técnicos |
+| `--grey` | `#BDBDBD` | Texto secundario |
+
+Google Fonts: Bebas Neue (títulos), Barlow Condensed (subtítulos), Barlow (texto), Roboto Mono (datos técnicos).
