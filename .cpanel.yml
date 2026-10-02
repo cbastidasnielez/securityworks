@@ -1,0 +1,9 @@
+---
+# Despliegue automático desde cPanel → Git Version Control → "Deploy HEAD Commit"
+# Copia el sitio a public_html (no copia README, .git ni este archivo).
+deployment:
+  tasks:
+    - export DEPLOYPATH=$HOME/public_html/
+    - /bin/mkdir -p $DEPLOYPATH
+    - /bin/cp -R css js img pages $DEPLOYPATH
+    - /bin/cp index.html 404.html .htaccess robots.txt sitemap.xml site.webmanifest $DEPLOYPATH
