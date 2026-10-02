@@ -69,12 +69,12 @@ Antes de publicar, confirme estos datos; no se pudieron verificar desde aquí:
    - Aplicaciones listadas en las páginas de Slickline y Wireline (son las aplicaciones típicas del servicio; ajuste según el alcance real de sus unidades).
    - Tiempos de respuesta (< 4 h local, < 24 h propuesta y movilización).
 
-## Marca: pendiente
+## Marca
 
-- **Logo en alta resolución**: el logo recibido mide 170 × 82 px. Se limpió y se ajustó para fondo oscuro, pero para máxima nitidez (pantallas retina, impresión) envíe el archivo original en **SVG, PDF o PNG de al menos 1000 px**; basta con reemplazar `img/brand-mark.webp` y `img/logo-sw-works-group.png`.
-- **Datos de contacto**: se mantienen dirección en Anaco, teléfonos, correo `info@swsecuritygroups.com` y redes sociales del sitio anterior. Si SW Works Group LLC usa otro dominio, correo o redes, hay que actualizarlos (en `pages/*.html`, `index.html` y `js/global.js`).
-- La foto `cabin_exterior` muestra el rótulo de la marca anterior pintado en la cabina; si no conviene, puede retirarse de la flota y la galería.
-- Se eliminó el RIF de la empresa anterior. Si la LLC tiene un número de registro que deba mostrarse, se añade en el pie de página.
+- Logo: se usa el archivo recibido (170 × 82 px), limpiado para fondo oscuro. Si en el futuro se consigue en SVG o PNG de alta resolución, basta con reemplazar `img/brand-mark.webp` y `img/logo-sw-works-group.png`.
+- Contacto: se mantienen dirección en Anaco, teléfonos, `info@swsecuritygroups.com` y redes sociales.
+- La foto de la cabina (`cabin_exterior`) se mantiene.
+- No se muestra número de registro de la empresa.
 
 ## Cómo publicar
 
