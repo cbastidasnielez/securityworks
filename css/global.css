@@ -13,6 +13,7 @@
   --orange:   #FF6600;
   --orange-d: #E05A00;
   --amber:    #F5A623;
+  --logo-red: #E0364A;
   --navy:     #0D2338;
   --white:    #FFFFFF;
   --grey:     #BDBDBD;
@@ -85,7 +86,7 @@ strong { color: var(--white); font-weight: 600; }
 .brand-mark { height: 46px; width: auto; flex-shrink: 0; }
 .brand-word { display: flex; flex-direction: column; line-height: 1; border-left: 1px solid rgba(255,255,255,.18); padding-left: 12px; }
 .brand-word b { font-family: var(--fB); font-weight: 700; font-size: 17px; letter-spacing: .1em; text-transform: uppercase; color: var(--white); white-space: nowrap; }
-.brand-word small { font-family: var(--fB); font-weight: 600; font-size: 11px; letter-spacing: .5em; color: var(--orange); margin-top: 5px; }
+.brand-word small { font-family: var(--fB); font-weight: 600; font-size: 11px; letter-spacing: .5em; color: var(--logo-red); margin-top: 5px; }
 
 .nav-links { display: flex; align-items: center; }
 .nav-links li { position: relative; }
