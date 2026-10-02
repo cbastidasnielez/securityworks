@@ -1,4 +1,5 @@
-# Publica la web en el hosting (cPanel) por FTP cada vez que se actualiza la rama main.
+# Publica la web en public_html/securityworks (cPanel) por FTP cada vez que se actualiza main.
+# El dominio de la web debe tener como Document Root: public_html/securityworks
 name: Publicar web
 
 on:
@@ -24,7 +25,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           security: loose
-          server-dir: ./
+          server-dir: ./securityworks/
           exclude: |
             **/.git*
             **/.git*/**
